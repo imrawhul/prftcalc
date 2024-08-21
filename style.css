@@ -35,9 +35,9 @@ body {
 }
 
 .container {
-  padding: 16px;
+  padding: 2.5rem 2rem;
   height: auto;
-  width: 32rem;
+  width: auto;
   border-radius: 5px;
   border: 1px solid var(--primarylight);
   background-color: var(--primarybg);
@@ -67,10 +67,10 @@ body {
 
   input {
     color: var(--dark);
-
+    margin-left: 8px;
     padding: 0 0.4rem;
     margin-bottom: .5rem;
-    width: 7rem;
+    width: 60%;
     height: 2rem;
   }
 
