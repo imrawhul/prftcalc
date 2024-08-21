@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+
+:root {
+  --dark: #2B2830;
+  --light: #e0e0e0;
+  --gray: #bababa;
+  --primarylight: #795EFF;
+  --primarybg: #3B325A;
+  --green: #1fa81f;
+
+  --titleFont: 2rem;
+  --primaryFont: 1.4rem;
+  --secFont: 1rem;
+  --terFont: 0.8rem;
+}
+
+* {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+}
+
+body {
+  background-color: var(--dark);
+  color: var(--light);
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.container {
+  padding: 16px;
+  height: auto;
+  width: 32rem;
+  border-radius: 5px;
+  border: 1px solid var(--primarylight);
+  background-color: var(--primarybg);
+
+
+
+  h1 {
+    text-align: center;
+    margin: auto;
+    padding-bottom: 20px;
+
+    color: var(--light);
+    font-size: var(--titleFont);
+
+  }
+
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  input[type=number] {
+    -moz-appearance: textfield;
+  }
+
+
+  input {
+    color: var(--dark);
+
+    padding: 0 0.4rem;
+    margin-bottom: .5rem;
+    width: 7rem;
+    height: 2rem;
+  }
+
+  #outputs {
+    padding: 1rem 0.4rem;
+    border-radius: 5px;
+    display: none;
+    /* border: 1px solid var(--green) ; */
+  }
+
+  #btns {
+    display: flex;
+    justify-content: space-between;
+
+    .sbmt {
+      color: #fff;
+      background-color: var(--green);
+      width: 60%;
+    }
+
+    .clr {
+      color: #fff;
+      background-color: #388ccc;
+      width: 40%;
+      margin-right: 10px;
+    }
+  }
+
+  button {
+    cursor: pointer;
+    border: none;
+    padding: .5rem;
+    border-radius: 5px;
+    margin: 1rem 0;
+
+  }
+
+
+
+
+
+}
+
+@media only screen and (max-width: 600px) {
+  .container {
+    height: auto;
+    width: 16rem;
+    font-size: calc(var(--primaryFont)*0.7);
+
+    h1 {
+      font-size: calc(var(--titleFont)*0.8);
+    }
+
+    .inputfields input {
+      width: 100%;
+    }
+
+
+    form label,
+    form input {
+      margin: 4px 0;
+    }
+
+    
+  }
+}
