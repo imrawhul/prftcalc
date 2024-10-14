@@ -15,30 +15,44 @@
     <h1 class="title">Profit Calculator</h1>
 
     <div class="inputfields">
+      <div class="inpt1">
+        <label for="index">Index:</label>
+        <select name="Indices" id="index">
+          <option value="25" selected>Nifty 50</option>
+          <option value="15">Bank Nifty</option>
+          <option value="25">Finnifty</option>
+          <option value="10">Sansex</option>
+          <option value="50">Midcpnifty</option>
+          <option value="15">Bankex</option>
 
-      <label for="lot">Lot size:</label>
-      <input type="number" id="lot" name="lot" placeholder="eg. 15"><br>
-
-      <label for="qty">Quantity:</label>
-      <input type="number" id="qty" name="qty" placeholder="eg. 3"><br>
-
-      <label for="bPrice">Buy Price:</label>
-      <input type="number" id="bPrice" name="bPrice" placeholder="eg. 220"><br>
-
-      <label for="sPrice">Sell Price:</label>
-      <input type="number" id="sPrice" name="sPrice" placeholder="eg. 400"><br>
+        </select>
+        <!-- <input type="number" id="lot" name="lot" placeholder="eg. 15"><br> -->
+      </div>
+      <div class="inpt1">
+        <label for="qty">Quantity:</label>
+        <input type="number" id="qty" name="qty" placeholder="eg. 3"><br>
+      </div>
+      <div class="inpt1">
+        <label for="bPrice">Buy Price:</label>
+        <input type="number" id="bPrice" name="bPrice" placeholder="eg. 220"><br>
+      </div>
+      <div class="inpt1">
+        <label for="sPrice">Sell Price:</label>
+        <input type="number" id="sPrice" name="sPrice" placeholder="eg. 400"><br>
+      </div>
     </div>
+
     <div id="outputs">
       <div id="investedAmt"></div>
       <div id="cAmt"></div>
       <div id="profit"></div>
     </div>
     <div id="btns">
-      <button type="button" onclick="clr()" class="clr">Clear</Clear>
-      <button type="button" onclick="calculate()" class="sbmt">Calculate</button>
+      <button type="button" onclick="clr()" class="clr" id="clr">Clear</button>
+      <button type="button" onclick="calculate()" class="sbmt" id="sbmt">Calculate</button>
     </div>
-  </div>
-  <script src="script.js"></script>
+
+    <script src="script.js"></script>
 </body>
 
 </html>
