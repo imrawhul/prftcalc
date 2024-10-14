@@ -100,12 +100,38 @@ body {
       transition: .3s ease-out;
       box-shadow: 0 10px black;
       border: 1px solid black;
+      position: relative;
+      overflow: hidden;
+
+    }
+
+    #sbmt::after,
+    #clr::after {
+      content: " ";
+      width: 120px;
+      height: 20px;
+      background-color: rgba(255, 255, 255, 0.541);
+      filter: blur(10px);
+      position: absolute;
+      left: -80px;
+      top: -10px;
+      rotate: -45deg;
+      transition: .5s ease-in-out;
     }
 
     #sbmt:hover,
     #clr:hover {
       transform: translateY(5px);
       box-shadow: 0 0px black;
+
+
+
+    }
+
+
+    #clr:hover::after,
+    #sbmt:hover:after {
+      translate: 170px 50px;
     }
   }
 
