@@ -7,7 +7,7 @@
   --gray: #bababa;
   --primarylight: #795EFF;
   --primarybg: #3B325A;
-  --green: #1fa81f;
+  --green: #4bd14b;
 
   --titleFont: 2rem;
   --primaryFont: 1.4rem;
@@ -38,6 +38,7 @@ body {
   padding: 2.5rem 2rem;
   height: auto;
   width: auto;
+
   border-radius: 5px;
   border: 1px solid var(--primarylight);
   background-color: var(--primarybg);
@@ -65,39 +66,51 @@ body {
   }
 
 
-  input {
-    color: var(--dark);
-   
-    padding: 0 0.4rem;
-    margin-bottom: .5rem;
-    width: 60%;
-    height: 2rem;
-  }
-
   #outputs {
+    margin-top: 24px;
     padding: 1rem 0.4rem;
     border-radius: 5px;
     display: none;
+
     /* border: 1px solid var(--green) ; */
   }
 
   #btns {
+    margin-top: 15px;
     display: flex;
     justify-content: space-between;
 
     .sbmt {
-      color: #fff;
+      color: black;
       background-color: var(--green);
       width: 60%;
+
     }
 
     .clr {
-      color: #fff;
-      background-color: #388ccc;
+      color: black;
+      background-color: rgb(226, 58, 58);
       width: 40%;
       margin-right: 10px;
     }
+
+    #sbmt,
+    #clr {
+      font-weight: bold;
+      transition: .3s ease-out;
+      box-shadow: 0 10px black;
+      border: 1px solid black;
+    }
+
+    #sbmt:hover,
+    #clr:hover {
+      transform: translateY(5px);
+      box-shadow: 0 0px black;
+    }
   }
+
+
+
 
   button {
     cursor: pointer;
@@ -109,31 +122,54 @@ body {
   }
 
 
+  .inputfields {
+    /* border: 1px solid; */
+    width: 100%;
+    position: relative;
+
+
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
 
 
 
-}
 
-@media only screen and (max-width: 600px) {
-  .container {
-    height: auto;
-    width: 16rem;
-    font-size: calc(var(--primaryFont)*0.7);
+    .inpt1 {
 
-    h1 {
-      font-size: calc(var(--titleFont)*0.8);
-    }
-
-    .inputfields input {
       width: 100%;
+
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      label {
+        width: 50%;
+        text-wrap: nowrap;
+      }
+
+      input,
+      :optional {
+
+        width: 100%;
+        margin-left: 10px;
+        color: var(--dark);
+        padding: 0 0.4rem;
+        height: 2rem;
+      }
+
+      #index {
+        text-transform: uppercase;
+      }
+
+      select option:active {
+        background-color: red;
+      }
+
+
     }
-
-
-    form label,
-    form input {
-      margin: 4px 0;
-    }
-
-    
   }
+
+
+
 }
